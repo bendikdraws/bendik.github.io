@@ -1,0 +1,163 @@
+  *
+  body {
+        margin: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+      }
+    
+    body { 
+        background-color: #4568a5;
+        color: #4d5061;
+        font-family: 'Avenir', bold;
+        font-size: 20px;
+    }
+
+    a:link {
+        color: #4568a5;
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #4568a5;
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #7aa2e9;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #4d5061;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+    .beholder {
+        display: grid;
+        grid-template-columns: minmax(0,1) minmax(0,5fr) minmax(0,5fr) minmax(0,1);
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+        'overskrift overskrift overskrift overskrift'
+        '. sosialtpress sosialtpress .'
+        '. bilde1 fotograf1 .'
+        '. bildedeling bildedeling .'
+        '. bilde2 fotograf2 .'
+        '. manipulasjon manipulasjon .'
+        'footer footer footer footer'
+        ;
+    }
+    .overskrift {
+        grid-area: overskrift;
+        font-size: 75px;
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        padding: 30px;
+        border-radius: 15px 15px 15px 15px;
+       padding-top: 5vw;
+    }
+
+    .sosialtpress {
+        grid-area: sosialtpress;
+        font-weight: 900;
+        color: #5c80bc;
+    }
+    .bildedeling {
+        grid-area: bildedeling;
+        font-weight: 900;
+        color: #5c80bc;
+    }
+
+    .mani {
+        grid-area: manipulasjon;
+        font-weight: 900;
+        color: #5c80bc;
+    }
+
+    #press {
+        scroll-margin-top: 100px;
+    }
+
+    #bildedeling, #manipulasjon {
+        scroll-margin-top: 90px;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #ff9147;
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        margin: 0;
+        padding: 1vw;
+        color: #000000;
+    }
+
+    .bendik:hover
+    {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    }
+
+    .container {
+        padding: 15vw;
+        padding-top: 5vh;
+    }
+  
+    .innhold {
+        background-color: #ffffff;
+        padding: 2vw;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .bilde1 {
+       grid-area: bilde1;
+       width: 100%;
+       text-align: center;
+    }
+
+   .bilde2 {
+       grid-area: bilde2;
+       width: 100%;
+       text-align: center;
+    }
+
+    .fotograf1 {
+        text-align: center;
+    }
+
+    .fotograf2 {
+        text-align: center;
+    }
+
+    img {
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    video {
+        border-radius: 15px 15px 15px 15px;
+        height: 36vh;
+        position: center;
+    }
+
+   .uvideo {
+       text-align: center;
+   }
+
+   @media only screen and (max-width:500px) {
+    .beholder {
+     margin-top: 400px;
+    }
+
+    .footer {
+        height: auto;
+        width: 100%;
+    }
+    .beholder {
+        font-size: 40px;
+    }
+}

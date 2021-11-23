@@ -1,0 +1,159 @@
+*
+body {
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    }
+
+body { 
+    background-color: #4568a5;
+    color: #4d5061;
+    font-family: 'Avenir', bold;
+    font-size: 20px;
+    }
+    
+    a:link {
+        color: #4568a5;
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #4568a5;
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #7aa2e9;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #4d5061;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+.beholder {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,4fr) minmax(0,4fr) minmax(0,4fr) minmax(0,4fr) minmax(0,1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    '. bildekilde bildekilde tekstkilde tekstkilde .'
+    '. kontaktmegbilde kontaktmeg kontaktmeg kontaktmegbilde2 .'
+    ' footer footer footer footer footer footer'
+    ;
+    grid-row-gap: 5%;
+    grid-column-gap: 3%;
+    margin-top: 80px;
+    }
+
+    .bildekilde{
+        grid-area: bildekilde;
+        border-radius: 15px 15px 15px 15px;
+        background-color: rgb(255, 255, 255);
+        padding: 5%;
+        padding-top: 1%;
+    }
+
+    .tekstkilde {
+        grid-area: tekstkilde;
+        border-radius: 15px 15px 15px 15px;
+        background-color: rgb(255, 255, 255);
+        padding: 5%;
+        padding-top: 1%;
+    }
+
+    .kontaktmegbilde {
+        grid-area: kontaktmegbilde;
+        border-radius: 15px 15px 15px 15px;
+        background-color: rgb(255, 255, 255);
+        height: 300px;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .kontaktmeg {
+        grid-area: kontaktmeg;
+        border-radius: 15px 15px 15px 15px;
+        background-color: rgb(255, 255, 255);
+        padding: 5%;
+        padding-top: 1%;
+    }
+
+    .kontaktmegbilde img {
+        flex-shrink: 0;
+        height: 410px;
+    } 
+
+    .footer {
+        grid-area: footer;
+        background-color: #ff9147;
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        margin: 0;
+        padding: 1vw;
+        color: #000000;
+    }
+    
+    .bendik:hover
+    {
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
+
+    .overskrift {
+        font-weight: 900;
+        color: #5c80bc;
+    }
+
+    .kontaktmegbilde2 {
+        grid-area: kontaktmegbilde2;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+       
+    .kontaktmegbilde2 img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    } 
+
+    @media only screen and (max-width: 600px) {
+
+    .beholder {
+        margin-top: 240px;
+    }
+
+    .footer {
+        height: auto;
+    }
+    .beholder {
+        grid-template-columns: minmax(0,1fr) minmax(0,4fr) minmax(0,4fr) minmax(0,4fr) minmax(0,4fr) minmax(0,1fr);
+        grid-template-rows: auto auto auto auto ;
+        grid-template-areas: 
+        '. bildekilde bildekilde bildekilde bildekilde .'
+        '. tekstkilde tekstkilde tekstkilde tekstkilde .'
+        '. kontaktmeg kontaktmeg kontaktmeg kontaktmeg .'
+        ' footer footer footer footer footer footer'
+        ;
+    }
+    .kontaktmegbilde {
+        display: none;
+    }
+
+    .kontaktmegbilde2 {
+        display: none;
+    }
+
+    .overskrift {
+        font-size: 15px;
+    }
+
+    .beholder {
+        font-size: 17px;
+    }
+}
